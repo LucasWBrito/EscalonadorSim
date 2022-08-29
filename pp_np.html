@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <label id = "oTempo"></label>
+        <label id = "CPU"></label>
+    </h3>
+    <div>
+        <table border="1" >
+            <thead >
+                <tr id="ganttHead"></tr>
+            </thead>
+            <tbody >
+                <tr id="ganttBody"></tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <label><b>Novo Processo:</b></label><br>
+        <!--<input type="text" id="novoNome"><br>-->
+        <label>TC:</label>
+        <input type="text" id="novoTC"><br>
+        <label>TS1:</label>
+        <input type="text" id="novoTS1"><br>
+        <label>Prioridade1:</label>
+        <input type="text" id="novoPrioridade1"><br>
+        <label>I/O:</label>
+        <input type="text" id="novoIO"><br>
+        <label>TS2:</label>
+        <input type="text" id="novoTS2"><br>
+        <label>Prioridade2:</label>
+        <input type="text" id="novoPrioridade2"><br>
+
+        <button type="button" id="addButton">Adicionar</button><br>
+    </div>    
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan="7">Novos Processos</th>
+                </tr>
+                <tr>
+                    <th>Proc</th>
+                    <th>TC</th>
+                    <th>TS1</th>
+                    <th>Pri1</th>
+                    <th>I/O</th>
+                    <th>TS2</th>
+                    <th>Pri2</th>
+                </tr>
+            </thead>
+            <tbody id="listaNovos"></tbody>
+        </table><br>
+    </div>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan="2">Fila P. P.</th>
+                </tr>
+                <tr>
+                    <th>Proc</th>
+                    <th>T. Restante</th>
+                    <th>Pri</th>
+                </tr>
+            </thead>
+            <tbody id="listaProntos"></tbody>
+        </table><br>
+    </div>
+
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan="2">Fila Espera</th>
+                </tr>
+                <tr>
+                    <th>Proc</th>
+                    <th>Tempo p/ Pronto</th>
+                </tr>
+            </thead>
+            <tbody id="listaEspera"></tbody>
+        </table><br>
+    </div>
+
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan="2">P. Terminados</th>
+                </tr>
+                <tr>
+                    <th>Proc</th>
+                    <th>T. Termino</th>
+                </tr>
+            </thead>
+            <tbody id="listaTerminados"></tbody>
+        </table><br>
+    </div>
+
+    <button type="button" id="proxPasso">Proximo</button><br>
+
+    <div> 
+        <table border="1" id="tabelaDesempenho"></table>
+    </div>
+
+    <script src="src/pp_np.js"></script>
+</body>
+</html>
